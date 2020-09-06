@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    var findInAlphabet = function(letter) {
+      letter = letter.toLowerCase();
+      var alphabet = "abcdefghijklmnopqrstuvwxyz";
+      for (var char of alphabet) {
+        if (char === letter) {
+          return letter;
+        }
+      }
+      return null;
+    };
+
+    var decodeWord = function(word, encodedWord, letter) {
+      encodedWord = Array.from(encodedWord);
+      for (var i in word) {
+        if (word[i] === letter) {
+          encodedWord[i] = letter;
+        }
+      }
+      encodedWord = encodedWord.join("");
+      return encodedWord;
+    };
+
+    var cypher = decodeWord("hello", "_____", "");
+    console.log("Угадайте слово: " + cypher);
+
+    var cypher = decodeWord("hello", "_____", "");
+    console.log("Угадайте слово: " + cypher);
+
+
+    
+
+
+  </script>
+</body>
+</html>
